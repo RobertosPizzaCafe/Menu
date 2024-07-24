@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Base styles */
+#menu-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+#menu-content .row {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center the cards horizontally */
+  margin: 0; /* Remove negative margin */
+}
+
+.card {
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  width: 90%; /* Wider width for the card */
+  max-width: 800px; /* Increase max width for larger screens */
+  margin: 20px 0; /* Add vertical margin */
+  background-color: black;
+  border: 2px solid #E31C25; /* Red border */
+  box-shadow: 0 0 20px rgba(236, 155, 0, 0.7); /* Larger shadow */
+  text-align: left; /* Left align text inside card */
+  padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space between title and content */
+  padding: 10px;
+  background: linear-gradient(90deg, rgba(227, 28, 37, 1) 0%, rgba(236, 155, 0, 1) 100%);
+  color: #fff; /* White text color for the title */
+  border-radius: 5px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between; /* Align items and price to opposite sides */
+  padding: 10px 0;
+  border-bottom: 1px solid #333; /* Separator between items */
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.item-price {
+  font-size: 1rem;
+  color: white;
+  background-color: #E31C25; /* Optional: Use background color if needed */
+  padding: 5px 10px; /* Optional: Add padding if needed */
+  border-radius: 4px; /* Optional: Rounded corners */
+}
+
+.item-ingredients {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.sizes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.size-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.size-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure full width to align sizes and prices properly */
+  margin-bottom: 10px; /* Space between sizes and prices */
+}
+
+.size-label {
+  margin-left: 15px;
+  font-size: 1rem;
+  color: white;
+}
+
+.size-box {
+  display: none; /* Hide size boxes */
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between; /* Align prices side by side */
+  width: 100%; /* Ensure full width to align prices properly */
+}
+
+.price-med, .price-lg {
+  font-size: 1rem;
+  color: white;
+  background-color: #E31C25;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: right;
+  margin-left: 15px; /* Space between price labels */
+}
+
+.extra-toppings {
+  margin-bottom: 20px; /* Space below extra toppings section */
+  padding: 15px; /* Padding around extra toppings section */
+  display: flex; /* Use flexbox to arrange items horizontally */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center;
+}
+
+.extra-topping-info {
+  color: red; /* Red font color for pricing info */
+  display: flex; /* Use flexbox to arrange pricing info horizontally */
+  justify-content: space-between; /* Space out the items */
+  margin-bottom: 10px; /* Space between pricing info and toppings list */
+  text-align: center;
+}
+
+.extra-topping, .half-topping {
+  margin-right: 15px; /* Space between price items */
+}
+
+.toppings-list {
+  color: white; /* White font color for the toppings list */
+  font-size: 1rem; /* Adjust font size if needed */
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.note-section {
+  font-family: Arial, sans-serif; /* Use the same font family */
+  font-size: 1rem; /* Use the same font size */
+  color: white; /* Use the same color */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.note-section .note {
+  font-weight: bold; /* Bold font for emphasis */
+  color: red; /* Red font color for pricing info */
+  justify-content: space-between; /* Space out the items */
+  margin-bottom: 10px; /* Space between pricing info and toppings list */
+  text-align: center;
+}
+
+.note-section .additional-info {
+  font-family: Arial, sans-serif; /* Use the same font family */
+  font-size: 16px; /* Use the same font size */
+  color: white; /* Slightly lighter color */
+  margin-top: 10px; /* Margin above the additional info */
+}
+
+
+/* Base styles for extra sections */
+.extra-toppings, .note-section {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Responsive adjustments for extra toppings and notes */
+@media (max-width: 1200px) {
+  .extra-toppings {
+    padding: 10px; /* Reduce padding for medium screens */
+  }
+  .note-section {
+    font-size: 1rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .extra-toppings {
+    padding: 8px; /* Further reduce padding for smaller screens */
+    font-size: 0.9rem; /* Smaller font size for smaller screens */
+  }
+  .note-section {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .extra-toppings {
+    padding: 5px; /* Minimal padding for extra small screens */
+    font-size: 0.85rem; /* Even smaller font size */
+  }
+  .note-section {
+    font-size: 0.85rem; /* Even smaller font size */
+    margin: auto;
+  }
+}
+
+/* Ensure items and prices in extra-toppings are responsive */
+.extra-topping-info {
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  align-items: center;
+}
+
+.extra-topping, .half-topping {
+  margin-bottom: 5px; /* Vertical margin for smaller screens */
+}
+
+.toppings-list {
+  font-size: 0.9rem; /* Adjust font size for smaller screens */
+}
+
+/* Responsive adjustments for the note section */
+.note-section .note {
+  font-size: 1rem; /* Base font size for note */
+}
+
+.note-section .additional-info {
+  font-size: 0.9rem; /* Slightly smaller font size for additional info */
+}

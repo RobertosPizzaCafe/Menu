@@ -1,0 +1,148 @@
+/* Container for social media icons and the "Follow Us!" text */
+.social-media-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styles for the "Follow Us!" text */
+.follow-us {
+  color: red;
+  font-size: 20px; /* Adjust size as needed */
+  margin-bottom: 10px; /* Space between text and icons */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Base styles */
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of icons */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (if needed) */
+  list-style: none;
+  height: auto; /* Adjust height based on content */
+  width: auto; /* Adjust width to fit content */
+  padding: 20px; /* Adjust padding as needed */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styles for each icon */
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Styles for tooltips */
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #000; /* Changed text color to be visible */
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Tooltip arrow */
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Show tooltip on hover */
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Tooltip text shadow */
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon color styles */
+.wrapper .facebook {
+  background: #3b5998;
+}
+
+.wrapper .facebook svg {
+  fill: #fff;
+}
+
+.wrapper .instagram {
+  background: #f7f7f7;
+}
+
+.wrapper .instagram svg {
+  fill: #bc2a8d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .wrapper .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .wrapper .tooltip {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .wrapper .tooltip {
+    font-size: 11px;
+    padding: 3px 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .follow-us {
+    font-size: 2rem;
+  }
+  .wrapper .icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 2rem;
+  }
+
+  .wrapper .tooltip {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}

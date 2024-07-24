@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Wings (6)",
+      "ingredients": "",
+      "sizes": {
+          "Price": "$8"
+        }
+    },
+    {
+      "name": "Wings (12)",
+      "ingredients": "",
+      "sizes": {
+          "Price": "$14"
+      }
+    },
+    {
+      "name": "Wings (24)",
+      "ingredients": "",
+      "sizes": {
+          "Price": "$26"
+        }
+    }
+  ]
+  

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Ham & Cheese",
+    "sizes": {
+        "Price": "$6.50"
+      }
+  },
+  {
+    "name": "Ham, Salami & Provolone",
+    "sizes": {
+        "Price": "$7.50"
+      }
+  },
+  {
+    "name": "Turkey & Cheese",
+    "sizes": {
+        "Price": "$6.50"
+      }
+  },
+  {
+    "name": "Turkey. Ham & Cheese",
+    "sizes": {
+        "Price": "$7.50"
+      }
+  },
+  {
+    "name": "Tuna Fish",
+    "sizes": {
+        "Price": "$7.50"
+      }
+  }
+  ]
+  
